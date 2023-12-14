@@ -18,7 +18,7 @@ The System is able to register new patient and add appointments for the patient.
     | id_number            |
     | mobile_number        |
     | email               |
-    | alt_contact_erson    |
+    | alt_contact_person    |
     | disability          |
     +---------------------+
 ```

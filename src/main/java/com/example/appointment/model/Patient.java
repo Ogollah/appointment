@@ -12,15 +12,24 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "first_name")
     private String firstName;
     private String surname;
+    @Column(name = "other_name")
     private String otherName;
+    @Column(name = "patient_number")
     private String patientNumber;
+    @Column(name = "birth_date")
     private Date birthDate;
+    @Column(name = "id_number")
     private Integer idNumber;
+    @Column(name = "mobile_number")
     private String mobileNumber;
     private String email;
+    @Column(name = "alt_contact_person")
     private String altContactPerson;
+    @Column(name = "alt_contact_person_phone")
+    private String altContactPersonPhone;
     private boolean disability;
 
     public Patient(Long id, String firstName, String surname, String otherName, String patientNumber, Date birthDate, Integer idNumber, String mobileNumber, String email, String altContactPerson, boolean disability) {
@@ -123,5 +132,13 @@ public class Patient {
 
     public void setDisability(boolean disability) {
         this.disability = disability;
+    }
+
+    public String getAltContactPersonPhone() {
+        return altContactPersonPhone;
+    }
+
+    public void setAltContactPersonPhone(String altContactPersonPhone) {
+        this.altContactPersonPhone = altContactPersonPhone;
     }
 }
