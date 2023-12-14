@@ -17,6 +17,9 @@ public class Appointment {
     private Date appointmentDate;
     private Date appointmentTime;
 
+    public Appointment() {
+    }
+
     public Appointment(Long id, Patient patient, Date appointmentDate, Date appointmentTime) {
         this.id = id;
         this.patient = patient;
