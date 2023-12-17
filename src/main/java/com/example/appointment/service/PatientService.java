@@ -12,6 +12,6 @@ public class PatientService {
 
     public Patient getPatientById(Long id)
     {
-        return patientRepository.findPatientBy(id);
+        return patientRepository.findPatientById(id);
     }
 }

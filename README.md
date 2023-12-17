@@ -47,3 +47,9 @@ Before running Appointment Management RESTAPI, ensure you have
 |------------------------------------|----------------------------------|-------------
 |/api/v1/patient                     |Create a patient                  |POST        
 |/api/v1/appointment/{id}            |Adds a new appointment            |POST
+
+    ###  Access Swagger Doc through
+    ```
+    http://localhost:8099/swagger-ui/index.html
+    This is after running the code.
+    ```

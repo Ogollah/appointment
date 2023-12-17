@@ -1,7 +1,7 @@
 package com.example.appointment.model;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -20,9 +20,9 @@ public class Patient {
     @Column(name = "patient_number")
     private String patientNumber;
     @Column(name = "birth_date")
-    private Date birthDate;
+    private LocalDate birthDate;
     @Column(name = "id_number")
-    private Integer idNumber;
+    private String idNumber;
     @Column(name = "mobile_number")
     private String mobileNumber;
     private String email;
@@ -31,8 +31,13 @@ public class Patient {
     @Column(name = "alt_contact_person_phone")
     private String altContactPersonPhone;
     private boolean disability;
+    private String county;
 
-    public Patient(Long id, String firstName, String surname, String otherName, String patientNumber, Date birthDate, Integer idNumber, String mobileNumber, String email, String altContactPerson, boolean disability) {
+    public Patient() {
+    }
+
+    public Patient(Long id, String firstName, String surname, String otherName, String patientNumber, LocalDate birthDate,
+                   String idNumber, String mobileNumber, String email, String altContactPerson, boolean disability, String county) {
         this.id = id;
         this.firstName = firstName;
         this.surname = surname;
@@ -44,6 +49,7 @@ public class Patient {
         this.email = email;
         this.altContactPerson = altContactPerson;
         this.disability = disability;
+        this.county = county;
     }
 
     public Long getId() {
@@ -86,19 +92,19 @@ public class Patient {
         this.patientNumber = patientNumber;
     }
 
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
-    public Integer getIdNumber() {
+    public String getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(Integer idNumber) {
+    public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
 
@@ -138,7 +144,17 @@ public class Patient {
         return altContactPersonPhone;
     }
 
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
     public void setAltContactPersonPhone(String altContactPersonPhone) {
         this.altContactPersonPhone = altContactPersonPhone;
+
+
     }
 }
