@@ -43,10 +43,10 @@ Before running Appointment Management RESTAPI, ensure you have
    Access the APIS through http://localhost:8099
    ```
 ## API Endpoints
-|Endpoint                            | Functionality                    |HTTP method 
-|------------------------------------|----------------------------------|-------------
-|/api/v1/patient                     |Create a patient                  |POST        
-|/api/v1/appointment/{id}            |Adds a new appointment            |POST
+|Endpoint                                   | Functionality                    |HTTP method 
+|-------------------------------------------|----------------------------------|-------------
+|/api/v1/patient                            |Create a patient                  |POST        
+|/api/v1/appointment/{patientId}/schedule   |Adds a new appointment            |POST
 
     ###  Access Swagger Doc through
     ```
